@@ -1,4 +1,4 @@
 # EighthLessonBeginnerArtist1.1
 <p align="left">
-<img src="https://user-images.githubusercontent.com/108148690/235194184-5a44dde2-6b57-4b5f-9e96-78dc3d321bf9.jpeg"/>
+<img src="https://user-images.githubusercontent.com/108148690/235195559-b35395ec-c5c1-4977-9552-88e7a466a057.jpeg"/>
 </p>
