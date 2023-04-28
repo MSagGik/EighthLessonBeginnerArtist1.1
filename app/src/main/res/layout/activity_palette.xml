@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#DADBDC">
+
+    <TextView
+        android:id="@+id/headerBrush"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="ЦВЕТ КИСТИ"
+        android:textColor="#047580"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/colorSelection"
+        android:layout_width="250dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBrush"
+        app:srcCompat="@drawable/color" />
+
+    <LinearLayout
+        android:id="@+id/colorInfo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorSelection">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Выбран цвет:"
+            android:textColor="#047580"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <View
+            android:id="@+id/colorInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eraser"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorInfo">
+
+        <TextView
+            android:id="@+id/textViewEraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ЛАСТИК"
+            android:textColor="#047580"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/eraserChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:thumbTint="#047580"
+            android:trackTint="#EFFAFB"
+            android:textOn="ВКЛ"
+            android:textOff="ВЫКЛ"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/headerSize"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="РАЗМЕР КИСТИ И ЛАСТИКА"
+        android:textColor="#047580"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eraser" />
+
+    <RadioGroup
+        android:id="@+id/size"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerSize">
+
+        <RadioButton
+            android:id="@+id/radioSize15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="#067580"
+            android:gravity="center"
+            android:scaleX="0.5"
+            android:scaleY="0.5"/>
+
+        <RadioButton
+            android:id="@+id/radioSize30"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="#067580"
+            android:gravity="center"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
+
+        <RadioButton
+            android:id="@+id/radioSize50"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="#067580"
+            android:gravity="center"
+            android:scaleX="1.2"
+            android:scaleY="1.2"/>
+
+        <RadioButton
+            android:id="@+id/radioSize70"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="#067580"
+            android:gravity="center"
+            android:scaleX="1.4"
+            android:scaleY="1.4" />
+
+        <RadioButton
+            android:id="@+id/radioSize90"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:buttonTint="#067580"
+            android:gravity="center"
+            android:scaleX="1.7"
+            android:scaleY="1.7"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size">
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="14dp"
+            android:layout_weight="1"
+            android:backgroundTint="#067580"
+            android:text="Отклонить"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="#067580"
+            android:text="Принять"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
